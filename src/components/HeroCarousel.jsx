@@ -3,11 +3,9 @@ import Icon from './Icon.jsx'
 
 // Hero slides — landscape campus images that auto-rotate.
 const SLIDES = [
-  { src: '/photos/hero2.png', alt: 'Kayaka PU College — Education for Character, Knowledge for Life' },
+  { src: '/photos/IMG_2139.jpg', alt: 'Kayaka PU College — Education for Character, Knowledge for Life' },
   { src: '/photos/hero-banner-4.png', alt: 'Admissions Open 2026-27 — the best PU College in Kalaburagi' },
   { src: '/photos/hero-banner.png', alt: 'Kayaka PU College Kalaburagi — the best college' },
-  { src: '/photos/hero-banner-2.png', alt: 'Take admission at the best college in Kalaburagi — Kayaka PU College' },
-  { src: '/photos/hero-banner-3.png', alt: 'Kayaka PU College — Happy World Environment Day' },
 ]
 
 const AUTOPLAY_MS = 4000
