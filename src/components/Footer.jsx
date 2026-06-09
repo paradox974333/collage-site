@@ -163,7 +163,7 @@ export default function Footer() {
       <div className="border-t border-surface-variant">
         <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-on-surface-variant text-body-sm">
-            © 2024 Kayaka PU College. All rights reserved.
+            © 2026 Kayaka PU College. All rights reserved.
           </p>
           <nav className="flex flex-wrap justify-center gap-6">
             {LEGAL.map((link) => (
@@ -176,6 +176,27 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
+        </div>
+      </div>
+
+      {/* Built-by watermark */}
+      <div className="border-t border-surface-variant/60">
+        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 py-4 flex items-center justify-center">
+          <a
+            href="https://www.socialbuzzz18.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Built by Social_buzzz18 — opens socialbuzzz18.in in a new tab"
+            className="group flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+          >
+            <span>Built by</span>
+            <img
+              src="/photos/IMG_7199.PNG"
+              alt="Social_buzzz18 logo"
+              className="h-6 w-auto object-contain"
+            />
+            <span className="font-medium group-hover:underline">Social_buzzz18</span>
+          </a>
         </div>
       </div>
     </footer>
