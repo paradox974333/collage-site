@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage University - Campus Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#88726c",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#dbc1b9",
+                        "surface-container-low": "#f6f3ec",
+                        "primary-fixed": "#ffdbd0",
+                        "on-surface": "#1c1c18",
+                        "tertiary-fixed": "#ffdf96",
+                        "surface-container-high": "#ebe8e1",
+                        "primary": "#99462a",
+                        "surface-container": "#f0eee7",
+                        "background": "#fcf9f2",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e5e2db",
+                        "on-secondary-fixed": "#101f09",
+                        "on-error": "#ffffff",
+                        "tertiary": "#765a05",
+                        "inverse-on-surface": "#f3f0ea",
+                        "surface-dim": "#dcdad3",
+                        "on-primary-fixed-variant": "#7a2f15",
+                        "on-primary-fixed": "#390b00",
+                        "on-primary-container": "#541400",
+                        "secondary-fixed": "#d4e9c4",
+                        "on-secondary-fixed-variant": "#3a4c31",
+                        "surface": "#fcf9f2",
+                        "secondary-container": "#d4e9c4",
+                        "on-tertiary-container": "#372900",
+                        "surface-variant": "#e5e2db",
+                        "inverse-primary": "#ffb59e",
+                        "surface-tint": "#99462a",
+                        "on-tertiary-fixed": "#251a00",
+                        "primary-fixed-dim": "#ffb59e",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "primary-container": "#d97757",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#576a4c",
+                        "inverse-surface": "#31312c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "on-background": "#1c1c18",
+                        "on-surface-variant": "#55433d",
+                        "secondary-fixed-dim": "#b8cdaa",
+                        "tertiary-container": "#ae8e3a",
+                        "secondary": "#516447",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "label-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .warm-shadow {
+            box-shadow: 0 8px 24px -4px rgba(153, 70, 42, 0.08);
+        }
+        .warm-shadow-hover:hover {
+            box-shadow: 0 12px 32px -8px rgba(153, 70, 42, 0.12);
+            transform: translateY(-2px);
+        }
+        .glass-panel {
+            background: rgba(252, 249, 242, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(252, 249, 242, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim font-label-lg text-label-lg docked full-width top-0 sticky z-50 bg-surface-container-low dark:bg-surface-container shadow-sm shadow-sm transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-12 transition-transform duration-300" data-icon="school" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+<span>Heritage University</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Campus Life</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Admissions</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Academics</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Stories</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">About</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-primary text-on-primary font-label-lg px-6 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm min-h-[48px] font-bold tracking-wide">
+                    Apply Now
+                </button>
+</div>
+<!-- Mobile Toggle -->
+<button class="md:hidden text-on-surface-variant p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+<div class="relative w-full rounded-xl overflow-hidden min-h-[600px] flex items-end shadow-sm group">
+<img alt="Vibrant campus life scene at Heritage University" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKPWPQMiLYpTz2r4qGouI7q6HDWrlCmEPJXFZJe9o5FdgAGmF3n-ka76H_fXcsxKFQ-mSUwm9qlTI9MK8dKafCTHLw0sBVMu7bSOxDKHClXr8dYcFTUFU-XHcNnU8rt3OhFPyTP0XG9LzkUGACsSvxri7kMbWmOHVl9X8SU1TANoERyQ3-_1mCIfyt_kgES9I9e3gRpu_k7sFtoyetAbObSDlqKOyP_Q41s6p86lHXgk6zdG_g5qjNjQ56a5K34biOyuqZZaKnCx7R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="relative z-10 p-md md:p-xl w-full max-w-3xl glass-panel m-md md:m-lg rounded-xl">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container font-label-sm rounded-full mb-4 uppercase tracking-wider">Campus Life</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6 text-balance">Find Your Place. <br/><span class="text-primary">Find Your People.</span></h1>
+<p class="font-body-lg text-on-surface-variant mb-8 max-w-xl text-balance">
+                        Experience a vibrant, sun-drenched campus designed for connection, creativity, and community. Welcome to the Heritage lifestyle.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary font-label-lg px-8 py-4 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all warm-shadow-hover min-h-[48px] font-bold tracking-wide">
+                            Explore Campus
+                        </button>
+<button class="border-2 border-secondary text-secondary font-label-lg px-8 py-4 rounded-full hover:bg-secondary-container hover:text-on-secondary-container transition-all min-h-[48px] font-bold tracking-wide flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+                            Watch Video
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Campus Life Highlights -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline-xl text-on-surface mb-2">Life at Heritage</h2>
+<p class="font-body-lg text-on-surface-variant">A community built for growth and energy.</p>
+</div>
+<a class="hidden md:flex items-center gap-1 font-label-lg text-primary hover:text-primary-container transition-colors group" href="#">
+                    View All <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[320px]">
+<!-- Highlight 1: Large -->
+<div class="md:col-span-8 rounded-xl overflow-hidden relative group warm-shadow-hover transition-all bg-surface-container-low border border-surface-variant">
+<img alt="Students studying together in a sun-drenched modern library space with large windows and lush greenery outside. Warm terracotta accents and natural wood textures create an inviting, collaborative atmosphere." class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out opacity-90" data-alt="Students studying together in a sun-drenched modern library space with large windows and lush greenery outside. Warm terracotta accents and natural wood textures create an inviting, collaborative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1ma-D8PcMUNhEVwP8Eom5I30PU4RViaRnjREJWaAB3AR4lVRMtEuFL0DfcS7uNoL-i1iXS8YQGSyw9j6TBaDFsmqcq0Fq5TjZWSmQb407rBAh_iFmxZRb0N1iuM3DiukRpmzwsSSkBgRFrmbKc9bDN0OFkAII6AcqYy5JA2V99ClViJGo3gRu3fR96uHYxmWhqgeWvoS9imfhZx01BQ3bSv12NxajWfiDxCD4sYTI0pLTLNQh0OqS5HR5kNq-cT-l-hv8O6waF1Wp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-variant/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+<span class="inline-block px-3 py-1 bg-white/80 backdrop-blur-sm text-primary font-label-sm rounded-full mb-3 shadow-sm">Collaborative Spaces</span>
+<h3 class="font-headline-lg text-on-surface mb-2 drop-shadow-sm">The Innovation Hub</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg drop-shadow-sm">State-of-the-art facilities designed to foster creativity and teamwork among peers.</p>
+</div>
+</div>
+<!-- Highlight 2: Small -->
+<div class="md:col-span-4 rounded-xl overflow-hidden relative group warm-shadow-hover transition-all bg-surface-container border border-surface-variant p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="restaurant" data-weight="fill" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<span class="inline-block px-3 py-1 bg-surface text-secondary font-label-sm rounded-full shadow-sm border border-surface-variant">Dining</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Culinary Commons</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Farm-to-table dining experiences right in the heart of campus.</p>
+<a class="font-label-lg text-primary hover:underline flex items-center gap-1" href="#">Explore Menus <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Highlight 3: Small -->
+<div class="md:col-span-4 rounded-xl overflow-hidden relative group warm-shadow-hover transition-all bg-tertiary-fixed border border-outline-variant p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="sports_basketball" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sports_basketball</span>
+</div>
+<span class="inline-block px-3 py-1 bg-white/50 text-tertiary font-label-sm rounded-full shadow-sm">Athletics</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-tertiary-container mb-2">Recreation Center</h3>
+<p class="font-body-md text-on-tertiary-container/80 mb-4">Stay active with our Olympic-sized pool and modern fitness studios.</p>
+<a class="font-label-lg text-tertiary hover:underline flex items-center gap-1" href="#">View Facilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Highlight 4: Medium/Wide -->
+<div class="md:col-span-8 rounded-xl overflow-hidden relative group warm-shadow-hover transition-all bg-surface-container-low border border-surface-variant">
+<img alt="Students relaxing and socializing on a sunny green quad surrounded by historic and modern campus buildings. The scene is bright and cheerful, reflecting a vibrant student community." class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out opacity-90" data-alt="Students relaxing and socializing on a sunny green quad surrounded by historic and modern campus buildings. The scene is bright and cheerful, reflecting a vibrant student community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdq2DwbsC-pEvcsrO_M8Ubva2vbV9Yt7Zo-Hs1Wxhx4-Ski8abuc2_z3rEyF4U0CivT_AlG4RsLoory3gCzqsjT53A_AmJt3hchb7hdg0RO92MSRjC3_Lzbg9CpyozbV6FhVLXn2DnKFIsP7qusalDSOnyloXzOGghVARKNhgkXtNaReETe9eqwh6uxLSPqLhgqxiSZ5SDWp01WENg_rIn8CwxfdvAk65g_LWKEHmeQwWz5MSfE32NBL3lqPqhK7Jo5Utpi_0jQHsd"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-variant/90 via-surface-variant/40 to-transparent"></div>
+<div class="absolute top-0 left-0 h-full flex flex-col justify-center p-6 md:p-8 w-full md:w-2/3">
+<span class="inline-block px-3 py-1 w-max bg-white/80 backdrop-blur-sm text-primary font-label-sm rounded-full mb-3 shadow-sm">Community</span>
+<h3 class="font-headline-lg text-on-surface mb-2 drop-shadow-sm">The Main Quad</h3>
+<p class="font-body-md text-on-surface-variant mb-6 drop-shadow-sm max-w-md">The heartbeat of Heritage. Where impromptu study sessions meet afternoon frisbee games.</p>
+<button class="w-max bg-surface text-primary font-label-lg px-6 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors shadow-sm font-bold tracking-wide border border-primary/20">
+                            Discover Student Orgs
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Progress Bar Section -->
+<section class="w-full bg-surface-container-low py-xl mt-lg">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<span class="font-display-lg text-primary mb-2">94%</span>
+<h4 class="font-headline-md text-on-surface mb-4">Student Satisfaction</h4>
+<div class="w-full h-2 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%] rounded-full"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-3">Consistently ranked highly for campus life.</p>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<span class="font-display-lg text-primary mb-2">150+</span>
+<h4 class="font-headline-md text-on-surface mb-4">Student Clubs</h4>
+<div class="w-full h-2 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-3">From robotics to theater, find your passion.</p>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<span class="font-display-lg text-primary mb-2">12:1</span>
+<h4 class="font-headline-md text-on-surface mb-4">Student-Faculty Ratio</h4>
+<div class="w-full h-2 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[100%] rounded-full"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-3">Personalized attention in every class.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low text-on-surface dark:text-on-surface-variant font-body-md text-body-md full-width mt-xl flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-lg max-w-[1440px] mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<a class="font-headline-md text-headline-md text-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="school" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+                    Heritage University
+                </a>
+<p class="text-on-surface-variant">© 2024 Heritage University. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Campus Map</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Directory</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Us</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-nav');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
