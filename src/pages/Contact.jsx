@@ -131,7 +131,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     className={fieldClass('name')}
-                    placeholder="Jane Doe"
+                    placeholder="Sachin Kadli"
                   />
                   {errors.name && <p className="text-error font-body-sm text-body-sm mt-1">{errors.name}</p>}
                 </div>
@@ -146,7 +146,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     className={fieldClass('email')}
-                    placeholder="jane@example.com"
+                    placeholder="sachin@example.com"
                   />
                   {errors.email && (
                     <p className="text-error font-body-sm text-body-sm mt-1">{errors.email}</p>
