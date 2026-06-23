@@ -53,7 +53,7 @@ export default function Academics() {
 
       {/* Stats strip */}
       <section className="bg-surface-container-low border-b border-surface-variant">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { v: '99%', l: 'PUC Result (2016)' },
             { v: '11', l: 'Distinctions' },
@@ -69,7 +69,7 @@ export default function Academics() {
       </section>
 
       {/* Feature image */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg md:pt-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg md:pt-xl reveal">
         <div className="relative rounded-xl overflow-hidden min-h-[360px] flex items-end warm-shadow group">
           <img
             alt="Kayaka PU College students using microscopes in the science laboratory"
@@ -89,7 +89,7 @@ export default function Academics() {
       </section>
 
       {/* Colleges grid */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Courses We Offer</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Choose the stream that fits your ambition.
@@ -122,17 +122,19 @@ export default function Academics() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg md:pb-xl reveal">
-        <div className="rounded-xl bg-primary text-on-primary p-8 md:p-xl flex flex-col md:flex-row items-center justify-between gap-6 warm-shadow">
-          <div>
-            <h3 className="font-headline-lg text-headline-lg mb-2">Ready to find your program?</h3>
-            <p className="font-body-lg text-body-lg opacity-90">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg md:pb-xl reveal">
+        <div className="stage-indigo rounded-[28px] overflow-hidden text-white px-6 py-16 md:py-20 flex flex-col items-center text-center gap-6">
+          <div className="max-w-2xl">
+            <h3 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-3 drop-shadow">
+              Ready to find your program?
+            </h3>
+            <p className="font-body-lg text-body-lg text-white/85">
               Our advisors can help you map the perfect academic path.
             </p>
           </div>
           <Link
             to="/contact"
-            className="bg-surface text-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container transition-colors font-bold tracking-wide whitespace-nowrap"
+            className="bg-black text-white font-label-lg text-label-lg px-8 py-4 rounded-full hover:opacity-90 transition-opacity font-bold tracking-wide whitespace-nowrap"
           >
             Talk to an Advisor
           </Link>

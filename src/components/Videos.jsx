@@ -57,7 +57,7 @@ function VideoCard({ video }) {
 
 export default function Videos() {
   return (
-    <section className="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
+    <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
       <div className="mb-5 md:mb-8 text-center">
         <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm rounded-full mb-3 uppercase tracking-wider">
           Watch

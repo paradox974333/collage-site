@@ -3,7 +3,7 @@ import Icon from '../components/Icon.jsx'
 
 export default function NotFound() {
   return (
-    <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl text-center flex flex-col items-center">
+    <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-xl text-center flex flex-col items-center">
       <Icon name="travel_explore" className="text-primary text-6xl mb-4" />
       <h1 className="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-2">404</h1>
       <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">

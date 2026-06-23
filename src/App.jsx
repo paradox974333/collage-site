@@ -16,7 +16,7 @@ export default function App() {
   const isHome = pathname === '/'
 
   return (
-    <div className="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+    <div className="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
       <ScrollToTop />
       <Navbar />
       {/* Home hero sits under the transparent fixed navbar; other pages need top offset */}

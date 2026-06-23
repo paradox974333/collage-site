@@ -54,7 +54,7 @@ export default function About() {
       />
 
       {/* Mission */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-4">Our Mission</h2>
@@ -80,7 +80,7 @@ export default function About() {
 
       {/* Values */}
       <section className="bg-surface-container-low py-lg md:py-xl">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop reveal">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop reveal">
           <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2 text-center">
             What We Stand For
           </h2>
@@ -105,7 +105,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6 md:mb-12">Our Journey</h2>
         <div className="space-y-6">
           {MILESTONES.map((m) => (

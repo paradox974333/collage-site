@@ -29,7 +29,7 @@ export default function Carousel() {
   }, [paused, next])
 
   return (
-    <section className="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
+    <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
       <div className="mb-5 md:mb-8 text-center">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">
           Campus Gallery

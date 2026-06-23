@@ -95,7 +95,7 @@ export default function Achievements() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
         {/* Header row */}
         <div className="flex items-end justify-between mb-5 md:mb-8">
           <div>

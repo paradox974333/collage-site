@@ -122,7 +122,7 @@ export default function Navbar() {
         <Link
           to="/"
           className={`font-headline-lg text-headline-lg font-bold flex items-center gap-3 group ${
-            transparent ? 'text-white' : 'text-primary dark:text-primary-fixed-dim'
+            transparent ? 'text-white' : 'text-on-surface'
           }`}
         >
           <img

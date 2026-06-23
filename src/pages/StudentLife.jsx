@@ -36,7 +36,7 @@ export default function StudentLife() {
       />
 
       {/* Feature image */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
         <div className="relative rounded-xl overflow-hidden min-h-[420px] flex items-end warm-shadow group">
           <img
             alt="Kayaka PU College students performing at the annual cultural function"
@@ -57,7 +57,7 @@ export default function StudentLife() {
       </section>
 
       {/* Organizations */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Activities & Facilities</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Beyond the classroom — where students grow in every direction.
@@ -82,7 +82,7 @@ export default function StudentLife() {
 
       {/* Events */}
       <section className="bg-surface-container-low py-lg md:py-xl">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
           <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6 md:mb-12">Upcoming Events</h2>
           <div className="space-y-4">
             {EVENTS.map((e) => (
@@ -108,7 +108,7 @@ export default function StudentLife() {
       </section>
 
       {/* Gallery */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Campus Gallery</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Moments from our cultural functions and student activities.

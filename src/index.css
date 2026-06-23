@@ -1,3 +1,8 @@
+/* Apple design tokens (generated from tokens.json) — single source of truth for
+   colors, type scale, spacing, radii, surfaces, and the theatrical gradients.
+   tailwind.config.js mirrors these so utility classes stay in sync. */
+@import '../variables.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,27 +13,28 @@
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    font-feature-settings: 'cv11', 'ss01';
   }
 
-  /* Brand-tinted text selection */
+  /* Azure-tinted text selection (the page's sole accent) */
   ::selection {
-    background-color: rgba(21, 119, 207, 0.18);
-    color: #00345a;
+    background-color: rgba(0, 113, 227, 0.16);
+    color: #1d1d1f;
   }
 
-  /* Modern, accessible focus ring for every interactive element */
+  /* Accessible focus ring in the single accent color */
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible,
   [tabindex]:focus-visible {
-    outline: 2px solid #1577cf;
+    outline: 2px solid #0071e3;
     outline-offset: 2px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .material-symbols-outlined {
@@ -48,25 +54,19 @@
   }
 }
 
-/* Softer, layered elevation for cards and panels */
+/* Flat elevation: Apple expresses depth through value + hairline borders, never shadow.
+   Cards stay shadowless; hover gives only a gentle, gravity-weighted lift. */
 .warm-shadow {
-  box-shadow:
-    0 2px 6px -2px rgba(21, 119, 207, 0.08),
-    0 12px 28px -10px rgba(21, 119, 207, 0.14);
+  box-shadow: none;
 }
 .warm-shadow-hover {
-  transition:
-    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.34s ease;
 }
 .warm-shadow-hover:hover {
-  box-shadow:
-    0 4px 10px -2px rgba(21, 119, 207, 0.12),
-    0 22px 44px -14px rgba(21, 119, 207, 0.22);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-/* Tactile press feedback on buttons and links */
+/* Tactile press feedback */
 @media (prefers-reduced-motion: no-preference) {
   button:active,
   a:active {
@@ -74,9 +74,9 @@
   }
 }
 
-/* Gradient brand text for headlines */
+/* Azure text accent for the rare emphasized word */
 .text-gradient {
-  background: linear-gradient(120deg, #1577cf 0%, #3f9fe8 45%, #e87317 110%);
+  background: linear-gradient(120deg, #0071e3 0%, #0066cc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -105,8 +105,8 @@
   }
 }
 
-/* Scroll-reveal: animates sections in as they enter the viewport.
-   Pure CSS via scroll-driven animations; gracefully does nothing where unsupported. */
+/* Scroll-reveal: sections ease in as they enter the viewport (0.32s feel).
+   Pure CSS via scroll-driven animations; gracefully no-ops where unsupported. */
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
     .reveal {
@@ -117,9 +117,35 @@
   }
 }
 
+/* Frosted overlay control (country/segmented selectors, sticky nav) */
 .glass-panel {
-  background: rgba(247, 250, 253, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(252, 249, 242, 0.5);
+  background: rgba(250, 250, 252, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Theatrical product-finish gradient backdrops (from variables.css tokens).
+   Used sparingly as full-bleed showcase stages — never as UI chrome. */
+.stage-citrus {
+  background: var(--gradient-citrus-gradient);
+}
+.stage-indigo {
+  background: var(--gradient-indigo-gradient);
+}
+.stage-blush {
+  background: var(--gradient-blush-gradient);
+}
+
+/* Maximum-contrast dark stage card */
+.surface-dark-stage {
+  background: var(--surface-dark-stage);
+  color: var(--color-snow);
+}
+
+/* Frosted pill selector surface (token: surface-frosted-control) */
+.surface-frosted {
+  background: rgba(210, 210, 215, 0.64);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }

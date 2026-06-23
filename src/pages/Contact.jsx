@@ -72,7 +72,7 @@ export default function Contact() {
         subtitle="Questions about admissions, academics, or campus life? Reach out — we'd love to hear from you."
       />
 
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl grid lg:grid-cols-3 gap-8 md:gap-12">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl grid lg:grid-cols-3 gap-8 md:gap-12">
         {/* Info cards */}
         <div className="space-y-6">
           {CONTACT_INFO.map((c) => (
@@ -196,7 +196,7 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 pb-lg md:pb-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 pb-lg md:pb-xl reveal">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
             <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">Find Us on the Map</h2>

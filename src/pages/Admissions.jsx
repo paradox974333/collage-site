@@ -47,7 +47,7 @@ export default function Admissions() {
       />
 
       {/* Process steps */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">How to Apply</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Four simple steps to becoming a Kayaka student.
@@ -73,7 +73,7 @@ export default function Admissions() {
 
       {/* Deadlines + Aid */}
       <section className="bg-surface-container-low py-lg md:py-xl">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6">Key Dates</h2>
             <ul className="space-y-3">
@@ -111,7 +111,7 @@ export default function Admissions() {
       </section>
 
       {/* Apply CTA */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl text-center reveal">
+      <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl text-center reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-4">Ready to Apply?</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
           Admissions are open for Science &amp; Commerce. Call{' '}

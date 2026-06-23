@@ -56,7 +56,7 @@ export default function Home() {
       <Achievements />
 
       {/* Bento Grid: Campus Life Highlights */}
-      <section className="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg reveal">
+      <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg reveal">
         <div className="mb-6 md:mb-12 flex justify-between items-end">
           <div>
             <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1 md:mb-2">

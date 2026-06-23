@@ -64,7 +64,7 @@ export default function Footer() {
   return (
     <footer className="bg-surface-container-highest dark:bg-surface-container-low text-on-surface dark:text-on-surface-variant font-body-md text-body-md w-full mt-xl">
       {/* Main footer body */}
-      <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 py-lg md:py-xl">
+      <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 py-lg md:py-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand + contact + socials */}
           <div className="lg:col-span-2">
@@ -161,7 +161,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-surface-variant">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-on-surface-variant text-body-sm">
             © 2026 Kayaka PU College. All rights reserved.
           </p>
@@ -181,7 +181,7 @@ export default function Footer() {
 
       {/* Built-by watermark */}
       <div className="border-t border-surface-variant/60">
-        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 py-4 flex items-center justify-center">
+        <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 py-4 flex items-center justify-center">
           <a
             href="https://www.socialbuzzz18.in/"
             target="_blank"
