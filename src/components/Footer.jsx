@@ -16,8 +16,8 @@ const LINK_COLUMNS = [
     title: 'Resources',
     links: [
       { label: 'Admissions', to: '/admissions' },
-      { label: 'Library', to: '/library' },
-      { label: 'Campus Map', to: '/student-life' },
+      { label: 'Courses', to: '/academics' },
+      { label: 'Campus Life', to: '/student-life' },
       { label: 'Directory', to: '/academics' },
     ],
   },
@@ -26,7 +26,7 @@ const LINK_COLUMNS = [
     links: [
       { label: 'Contact us', to: '/contact' },
       { label: 'Financial Aid', to: '/admissions' },
-      { label: 'Ask a Librarian', to: '/library' },
+      { label: 'Visit Campus', to: '/contact' },
       { label: 'Careers', to: '/about' },
     ],
   },

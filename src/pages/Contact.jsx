@@ -196,7 +196,7 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 pb-lg md:pb-xl">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-8 pb-lg md:pb-xl reveal">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
             <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">Find Us on the Map</h2>

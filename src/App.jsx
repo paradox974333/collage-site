@@ -8,7 +8,6 @@ import About from './pages/About.jsx'
 import Academics from './pages/Academics.jsx'
 import Admissions from './pages/Admissions.jsx'
 import StudentLife from './pages/StudentLife.jsx'
-import Library from './pages/Library.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
@@ -28,7 +27,6 @@ export default function App() {
           <Route path="/academics" element={<Academics />} />
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/student-life" element={<StudentLife />} />
-          <Route path="/library" element={<Library />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

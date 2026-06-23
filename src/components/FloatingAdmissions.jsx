@@ -48,20 +48,17 @@ export default function FloatingAdmissions() {
         </div>
       )}
 
-      {/* Floating trigger */}
+      {/* Floating call button */}
       <button
         onClick={() => setOpen((v) => !v)}
-        aria-label="Admissions open — call to apply"
-        className="relative flex items-center gap-2 bg-primary text-on-primary rounded-full shadow-lg pl-4 pr-5 py-3 hover:bg-primary-container hover:text-on-primary-container transition-colors font-bold tracking-wide"
+        aria-label="Call to apply — admissions open"
+        className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors"
       >
         {/* Subtle attention pulse */}
         {!open && (
           <span className="absolute inset-0 rounded-full bg-primary/40 animate-ping pointer-events-none" />
         )}
-        <span className="relative flex items-center gap-2">
-          <Icon name={open ? 'call' : 'how_to_reg'} fill className="text-xl" />
-          <span className="font-label-lg text-label-lg whitespace-nowrap">Admissions Open</span>
-        </span>
+        <Icon name={open ? 'close' : 'call'} fill className="relative text-2xl md:text-3xl" />
       </button>
     </div>
   )

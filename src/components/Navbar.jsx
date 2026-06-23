@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { label: 'Academics', to: '/academics' },
   { label: 'Admissions', to: '/admissions' },
   { label: 'Student Life', to: '/student-life' },
-  { label: 'Library', to: '/library' },
   { label: 'Contact us', to: '/contact' },
 ]
 
@@ -19,7 +18,6 @@ const SEARCH_INDEX = [
   { label: 'Academics', to: '/academics', keywords: 'academics programs colleges courses science arts commerce degree faculty labs' },
   { label: 'Admissions', to: '/admissions', keywords: 'admissions apply application fees deadline scholarship financial aid enroll' },
   { label: 'Student Life', to: '/student-life', keywords: 'student life clubs events gallery cultural sports activities organizations' },
-  { label: 'Library', to: '/library', keywords: 'library books catalog resources study hours research' },
   { label: 'Contact us', to: '/contact', keywords: 'contact address phone email map directions location kalaburagi' },
 ]
 
@@ -115,7 +113,7 @@ export default function Navbar() {
       className={`font-label-lg text-label-lg w-full top-0 z-50 fixed transition-all duration-300 ${
         transparent
           ? 'bg-gradient-to-b from-black/55 to-transparent'
-          : 'bg-surface-container-low dark:bg-surface-container shadow-md'
+          : 'bg-surface-container-low/80 dark:bg-surface-container/80 backdrop-blur-xl shadow-md border-b border-white/40'
       }`}
       id="main-nav"
     >
@@ -200,7 +198,7 @@ export default function Navbar() {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search the site… (e.g. admissions, library, contact)"
+                placeholder="Search the site… (e.g. admissions, academics, contact)"
                 className="w-full pl-12 pr-12 py-3 rounded-full border border-surface-variant bg-surface text-on-surface focus:border-primary focus:ring-primary"
               />
               <button

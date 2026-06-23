@@ -47,7 +47,7 @@ export default function Admissions() {
       />
 
       {/* Process steps */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">How to Apply</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Four simple steps to becoming a Kayaka student.
@@ -111,7 +111,7 @@ export default function Admissions() {
       </section>
 
       {/* Apply CTA */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl text-center">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl text-center reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-4">Ready to Apply?</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
           Admissions are open for Science &amp; Commerce. Call{' '}

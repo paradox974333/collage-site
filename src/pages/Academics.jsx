@@ -69,7 +69,7 @@ export default function Academics() {
       </section>
 
       {/* Feature image */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg md:pt-xl">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg md:pt-xl reveal">
         <div className="relative rounded-xl overflow-hidden min-h-[360px] flex items-end warm-shadow group">
           <img
             alt="Kayaka PU College students using microscopes in the science laboratory"
@@ -89,7 +89,7 @@ export default function Academics() {
       </section>
 
       {/* Colleges grid */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Courses We Offer</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
           Choose the stream that fits your ambition.
@@ -122,7 +122,7 @@ export default function Academics() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg md:pb-xl">
+      <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg md:pb-xl reveal">
         <div className="rounded-xl bg-primary text-on-primary p-8 md:p-xl flex flex-col md:flex-row items-center justify-between gap-6 warm-shadow">
           <div>
             <h3 className="font-headline-lg text-headline-lg mb-2">Ready to find your program?</h3>

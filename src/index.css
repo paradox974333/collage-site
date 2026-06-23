@@ -3,8 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Brand-tinted text selection */
+  ::selection {
+    background-color: rgba(21, 119, 207, 0.18);
+    color: #00345a;
+  }
+
+  /* Modern, accessible focus ring for every interactive element */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #1577cf;
+    outline-offset: 2px;
+    border-radius: 6px;
   }
 
   .material-symbols-outlined {
@@ -24,13 +48,41 @@
   }
 }
 
+/* Softer, layered elevation for cards and panels */
 .warm-shadow {
-  box-shadow: 0 8px 24px -4px rgba(21, 119, 207, 0.1);
+  box-shadow:
+    0 2px 6px -2px rgba(21, 119, 207, 0.08),
+    0 12px 28px -10px rgba(21, 119, 207, 0.14);
+}
+.warm-shadow-hover {
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .warm-shadow-hover:hover {
-  box-shadow: 0 12px 32px -8px rgba(21, 119, 207, 0.16);
-  transform: translateY(-2px);
+  box-shadow:
+    0 4px 10px -2px rgba(21, 119, 207, 0.12),
+    0 22px 44px -14px rgba(21, 119, 207, 0.22);
+  transform: translateY(-4px);
 }
+
+/* Tactile press feedback on buttons and links */
+@media (prefers-reduced-motion: no-preference) {
+  button:active,
+  a:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Gradient brand text for headlines */
+.text-gradient {
+  background: linear-gradient(120deg, #1577cf 0%, #3f9fe8 45%, #e87317 110%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -39,6 +91,29 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll-reveal: animates sections in as they enter the viewport.
+   Pure CSS via scroll-driven animations; gracefully does nothing where unsupported. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
   }
 }
 
