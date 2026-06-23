@@ -1,21 +1,27 @@
-import Icon from './Icon.jsx'
+import { Link } from 'react-router-dom'
 
-// Shared hero/banner used at the top of every inner page.
-export default function PageHeader({ eyebrow, title, subtitle, icon }) {
+// Apple-style centered hero: small eyebrow, poster-scale headline, light subtext,
+// and at most one azure pill CTA. Used at the top of every inner page.
+export default function PageHeader({ eyebrow, title, subtitle, cta }) {
   return (
-    <section className="w-full bg-gradient-to-b from-surface-container to-surface-container-low border-b border-surface-variant">
-      <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-container text-on-secondary-container font-label-sm rounded-full mb-4 uppercase tracking-wider">
-          {icon && <Icon name={icon} className="text-base" />}
-          {eyebrow}
-        </span>
-        <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4 text-balance">
-          {title}
-        </h1>
+    <section className="w-full bg-background">
+      <div className="max-w-[1000px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg pb-md md:pt-[104px] md:pb-xl text-center reveal">
+        {eyebrow && <p className="eyebrow text-on-surface-variant mb-4">{eyebrow}</p>}
+        <h1 className="text-hero text-on-surface text-balance mb-5">{title}</h1>
         {subtitle && (
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+          <p className="font-body-lg text-body-lg md:text-[21px] leading-relaxed text-on-surface-variant max-w-2xl mx-auto text-balance">
             {subtitle}
           </p>
+        )}
+        {cta && (
+          <div className="mt-8 flex justify-center">
+            <Link
+              to={cta.to}
+              className="bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-lg text-label-lg hover:bg-primary-container transition-colors"
+            >
+              {cta.label}
+            </Link>
+          </div>
         )}
       </div>
     </section>

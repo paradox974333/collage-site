@@ -12,9 +12,9 @@ export default function FloatingAdmissions() {
     <div className="fixed bottom-5 left-5 z-50 flex flex-col items-start">
       {/* Popover card */}
       {open && (
-        <div className="mb-3 w-[260px] rounded-2xl bg-surface border border-surface-variant shadow-xl overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+        <div className="mb-3 w-[260px] rounded-[20px] bg-surface border border-surface-variant shadow-[0_20px_48px_-12px_rgba(0,0,0,0.22)] overflow-hidden animate-[fadeIn_0.2s_ease-out]">
           <div className="bg-primary text-on-primary px-4 py-3 flex items-center justify-between">
-            <span className="font-label-lg text-label-lg font-bold tracking-wide">Admissions Open</span>
+            <span className="font-label-lg text-label-lg tracking-wide">Admissions Open</span>
             <button onClick={() => setOpen(false)} aria-label="Close" className="opacity-80 hover:opacity-100">
               <Icon name="close" className="text-xl" />
             </button>
@@ -28,37 +28,37 @@ export default function FloatingAdmissions() {
                 <a
                   key={p}
                   href={`tel:${p}`}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-surface-container-low hover:bg-primary hover:text-on-primary transition-colors group"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-background hover:bg-primary hover:text-on-primary transition-colors group"
                 >
                   <Icon name="call" className="text-primary group-hover:text-on-primary" />
-                  <span className="font-label-lg text-label-lg font-semibold tracking-wide">{p}</span>
+                  <span className="font-label-lg text-label-lg tracking-wide">{p}</span>
                 </a>
               ))}
               <a
                 href={`https://wa.me/${WHATSAPP}?text=Hi,%20I%20would%20like%20to%20know%20about%20admissions%20at%20Kayaka%20PU%20College.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-secondary text-on-secondary hover:opacity-90 transition-opacity"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-on-surface text-snow hover:opacity-90 transition-opacity"
               >
                 <Icon name="chat" />
-                <span className="font-label-lg text-label-lg font-semibold tracking-wide">WhatsApp Us</span>
+                <span className="font-label-lg text-label-lg tracking-wide">WhatsApp Us</span>
               </a>
             </div>
           </div>
         </div>
       )}
 
-      {/* Floating call button */}
+      {/* Floating call button — Apple azure circle */}
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Call to apply — admissions open"
-        className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors"
+        className="relative w-14 h-14 rounded-full bg-primary text-on-primary shadow-[0_8px_24px_-6px_rgba(0,113,227,0.5)] flex items-center justify-center hover:bg-primary-container transition-colors"
       >
         {/* Subtle attention pulse */}
         {!open && (
-          <span className="absolute inset-0 rounded-full bg-primary/40 animate-ping pointer-events-none" />
+          <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping pointer-events-none" />
         )}
-        <Icon name={open ? 'close' : 'call'} fill className="relative text-2xl md:text-3xl" />
+        <Icon name={open ? 'close' : 'call'} fill className="relative text-2xl" />
       </button>
     </div>
   )

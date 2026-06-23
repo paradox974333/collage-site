@@ -1,0 +1,27 @@
+# Kayaka PU College — robots.txt
+User-agent: *
+Allow: /
+
+# Common AI / search crawlers (2026) — explicitly welcomed
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.kayaka.net/sitemap.xml

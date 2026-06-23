@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import Icon from '../components/Icon.jsx'
 import HeroCarousel from '../components/HeroCarousel.jsx'
 import Carousel from '../components/Carousel.jsx'
@@ -49,6 +50,11 @@ const BENTO = [
 export default function Home() {
   return (
     <>
+      <Seo
+        path="/"
+        description="Kayaka PU College, Kalaburagi — a residential Pre-University College of Science & Commerce with modern labs, hostel, transport and a 99% PUC result. Admissions open for 2026-27."
+      />
+
       {/* Hero Section — auto-moving carousel */}
       <HeroCarousel />
 

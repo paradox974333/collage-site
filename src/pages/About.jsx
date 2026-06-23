@@ -1,3 +1,4 @@
+import Seo from '../components/Seo.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Icon from '../components/Icon.jsx'
 
@@ -46,6 +47,11 @@ const MILESTONES = [
 export default function About() {
   return (
     <>
+      <Seo
+        title="About Us"
+        path="/about"
+        description="Founded by Sri. Shivaraj Patil under Kayaka Foundation Education Trust (R), Kayaka PU College is a residential Science & Commerce campus in Kalaburagi with a legacy of academic excellence."
+      />
       <PageHeader
         eyebrow="About Us"
         icon="school"
@@ -57,8 +63,8 @@ export default function About() {
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-4">Our Mission</h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-4">
+            <h2 className="text-section text-on-surface mb-5">Our Mission</h2>
+            <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant mb-4">
               Kayaka Foundation PU College of Science &amp; Commerce empowers students through rigorous
               academics, hands-on laboratory learning, and a caring residential community.
             </p>
@@ -81,10 +87,10 @@ export default function About() {
       {/* Values */}
       <section className="bg-surface-container-low py-lg md:py-xl">
         <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop reveal">
-          <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2 text-center">
+          <h2 className="text-section text-on-surface mb-3 text-center">
             What We Stand For
           </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 text-center">
+          <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant mb-12 text-center">
             The values that shape our community.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -106,14 +112,14 @@ export default function About() {
 
       {/* Timeline */}
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6 md:mb-12">Our Journey</h2>
-        <div className="space-y-6">
+        <h2 className="text-section text-on-surface mb-6 md:mb-12 text-center">Our Journey</h2>
+        <div className="space-y-6 max-w-3xl mx-auto">
           {MILESTONES.map((m) => (
             <div key={m.year} className="flex gap-6 items-start">
-              <span className="font-display-lg-mobile text-display-lg-mobile text-primary w-28 shrink-0">
+              <span className="font-display-lg-mobile text-display-lg-mobile text-on-surface w-28 shrink-0">
                 {m.year}
               </span>
-              <p className="font-body-lg text-body-lg text-on-surface-variant border-l-2 border-primary/30 pl-6 py-2">
+              <p className="font-body-lg text-body-lg text-on-surface-variant border-l border-surface-variant pl-6 py-2">
                 {m.text}
               </p>
             </div>

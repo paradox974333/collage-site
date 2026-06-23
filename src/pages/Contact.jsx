@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Seo from '../components/Seo.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Icon from '../components/Icon.jsx'
 
@@ -65,6 +66,11 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contact Us"
+        path="/contact"
+        description="Get in touch with Kayaka PU College, Kalaburagi. Visit us at Kesaratagi Road, Kotnur-D, call 09686569898 / 8123439659, or send us a message."
+      />
       <PageHeader
         eyebrow="Contact Us"
         icon="contact_support"
@@ -199,7 +205,7 @@ export default function Contact() {
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 pb-lg md:pb-xl reveal">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">Find Us on the Map</h2>
+            <h2 className="text-section text-on-surface mb-1">Find Us on the Map</h2>
             <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
               <Icon name="location_on" className="text-primary" />
               Kesaratagi Road, Kalaburagi, Karnataka 585102

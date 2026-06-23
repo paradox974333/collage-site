@@ -99,13 +99,11 @@ export default function Achievements() {
         {/* Header row */}
         <div className="flex items-end justify-between mb-5 md:mb-8">
           <div>
-            <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm rounded-full mb-3 uppercase tracking-wider">
-              Achievements
-            </span>
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">
+            <p className="eyebrow text-on-surface-variant mb-3">Achievements</p>
+            <h2 className="text-section text-on-surface mb-2">
               Results That Speak for Themselves
             </h2>
-            <p className="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl">
+            <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant max-w-xl">
               Year after year, our students excel — and the press takes notice.
             </p>
           </div>

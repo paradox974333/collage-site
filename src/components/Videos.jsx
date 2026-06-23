@@ -58,14 +58,10 @@ function VideoCard({ video }) {
 export default function Videos() {
   return (
     <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
-      <div className="mb-5 md:mb-8 text-center">
-        <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm rounded-full mb-3 uppercase tracking-wider">
-          Watch
-        </span>
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">
-          Life at Kayaka, in Motion
-        </h2>
-        <p className="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant">
+      <div className="mb-6 md:mb-10 text-center max-w-2xl mx-auto">
+        <p className="eyebrow text-on-surface-variant mb-3">Watch</p>
+        <h2 className="text-section text-on-surface mb-3">Life at Kayaka, in Motion</h2>
+        <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant">
           A look at our campus events and celebrations.
         </p>
       </div>

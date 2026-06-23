@@ -22,7 +22,8 @@ const SEARCH_INDEX = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const [atTop, setAtTop] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -83,16 +84,27 @@ export default function Navbar() {
     }
   }, [searchOpen])
 
-  // Turn the navbar solid once the user scrolls past most of the hero.
+  // Track scroll position: hide on scroll-down / reveal on scroll-up, and note when at the top.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.7)
+    let lastY = window.scrollY
+    const onScroll = () => {
+      const y = window.scrollY
+      setAtTop(y <= 8)
+      if (y > lastY && y > 120) setHidden(true)
+      else if (y < lastY) setHidden(false)
+      if (y <= 8) setHidden(false)
+      lastY = y
+    }
     onScroll()
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Transparent overlay only on the home page, at the top, with no panel open.
-  const transparent = isHome && !scrolled && !menuOpen && !searchOpen
+  // Always keep the bar visible while a panel is open.
+  const navHidden = hidden && !menuOpen && !searchOpen
+
+  // On the home page, the bar is transparent over the hero until you scroll.
+  const transparent = isHome && atTop && !menuOpen && !searchOpen
 
   const desktopLinkClass = ({ isActive }) =>
     transparent
@@ -111,9 +123,11 @@ export default function Navbar() {
   return (
     <header
       className={`font-label-lg text-label-lg w-full top-0 z-50 fixed transition-all duration-300 ${
+        navHidden ? '-translate-y-full' : 'translate-y-0'
+      } ${
         transparent
           ? 'bg-gradient-to-b from-black/55 to-transparent'
-          : 'bg-surface-container-low/80 dark:bg-surface-container/80 backdrop-blur-xl shadow-md border-b border-white/40'
+          : 'bg-snow/80 backdrop-blur-xl border-b border-surface-variant'
       }`}
       id="main-nav"
     >

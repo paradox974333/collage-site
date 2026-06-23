@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Icon from '../components/Icon.jsx'
 
@@ -39,19 +40,26 @@ const DATES = [
 export default function Admissions() {
   return (
     <>
+      <Seo
+        title="Admissions 2026-27"
+        path="/admissions"
+        description="Admissions are open at Kayaka PU College, Kalaburagi for Science & Commerce. Learn how to apply, key dates, and hostel & transport options. Call 09686569898."
+      />
       <PageHeader
         eyebrow="Admissions"
-        icon="how_to_reg"
-        title="Your Journey Starts Here."
+        title="Your journey starts here."
         subtitle="Joining Kayaka is the first step toward a future without limits. Here's everything you need to apply."
+        cta={{ label: 'Contact Admissions', to: '/contact' }}
       />
 
       {/* Process steps */}
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">How to Apply</h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
-          Four simple steps to becoming a Kayaka student.
-        </p>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-section text-on-surface mb-3">How to Apply</h2>
+          <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant">
+            Four simple steps to becoming a Kayaka student.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {STEPS.map((s) => (
             <div
@@ -59,7 +67,7 @@ export default function Admissions() {
               className="bg-surface rounded-xl border border-surface-variant p-6 warm-shadow-hover transition-all"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="font-display-lg-mobile text-display-lg-mobile text-primary/20">{s.n}</span>
+                <span className="font-display-lg-mobile text-display-lg-mobile text-on-surface/10">{s.n}</span>
                 <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
                   <Icon name={s.icon} fill />
                 </div>
@@ -75,7 +83,7 @@ export default function Admissions() {
       <section className="bg-surface-container-low py-lg md:py-xl">
         <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-8 md:gap-12">
           <div>
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6">Key Dates</h2>
+            <h2 className="text-section text-on-surface mb-6">Key Dates</h2>
             <ul className="space-y-3">
               {DATES.map((d) => (
                 <li
@@ -83,10 +91,10 @@ export default function Admissions() {
                   className="flex items-center justify-between bg-surface rounded-lg border border-surface-variant px-5 py-4"
                 >
                   <span className="font-body-md text-body-md text-on-surface flex items-center gap-3">
-                    <Icon name="event" className="text-primary" />
+                    <Icon name="event" className="text-on-surface-variant" />
                     {d.label}
                   </span>
-                  <span className="font-label-lg text-label-lg text-primary">{d.date}</span>
+                  <span className="font-label-lg text-label-lg text-on-surface-variant">{d.date}</span>
                 </li>
               ))}
             </ul>
@@ -112,11 +120,11 @@ export default function Admissions() {
 
       {/* Apply CTA */}
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl text-center reveal">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-4">Ready to Apply?</h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
+        <h2 className="text-section text-on-surface mb-4">Ready to Apply?</h2>
+        <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant mb-8 max-w-xl mx-auto">
           Admissions are open for Science &amp; Commerce. Call{' '}
-          <span className="text-primary font-semibold">09686569898</span> or{' '}
-          <span className="text-primary font-semibold">8123439659</span> to begin your Kayaka story.
+          <span className="text-on-surface font-semibold">09686569898</span> or{' '}
+          <span className="text-on-surface font-semibold">8123439659</span> to begin your Kayaka story.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a

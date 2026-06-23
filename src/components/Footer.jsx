@@ -44,9 +44,9 @@ const SOCIALS = [
 ]
 
 const LEGAL = [
-  { label: 'Privacy Policy', to: '/about' },
-  { label: 'Terms of Service', to: '/about' },
-  { label: 'Accessibility', to: '/about' },
+  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Terms of Service', to: '/terms' },
+  { label: 'Accessibility', to: '/accessibility' },
 ]
 
 export default function Footer() {
@@ -62,13 +62,13 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-surface-container-highest dark:bg-surface-container-low text-on-surface dark:text-on-surface-variant font-body-md text-body-md w-full mt-xl">
+    <footer className="bg-surface-container-highest dark:bg-surface-container-low text-on-surface dark:text-on-surface-variant font-body-md text-body-md w-full mt-xl border-t border-surface-variant">
       {/* Main footer body */}
       <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-8 py-lg md:py-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-8 md:gap-10">
           {/* Brand + contact + socials */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="font-headline-md text-headline-md text-primary flex items-center gap-3 mb-4">
+          <div className="col-span-2 lg:col-span-2">
+            <Link to="/" className="font-headline-md text-headline-md text-on-surface flex items-center gap-3 mb-4">
               <img
                 src="/IMG_1587-removebg-preview.png"
                 alt="Kayaka Foundation Education Trust logo"
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-2 mb-6">
               {CONTACT.map((c) => (
                 <li key={c.text} className="flex items-center gap-3 text-on-surface-variant">
-                  <Icon name={c.icon} className="text-primary text-base" />
+                  <Icon name={c.icon} className="text-on-surface-variant text-base" />
                   <span>{c.text}</span>
                 </li>
               ))}
@@ -127,7 +127,7 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h3 className="font-label-lg text-label-lg text-on-surface uppercase tracking-wider mb-4">
               Newsletter
             </h3>

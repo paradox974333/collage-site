@@ -9,6 +9,9 @@ import Academics from './pages/Academics.jsx'
 import Admissions from './pages/Admissions.jsx'
 import StudentLife from './pages/StudentLife.jsx'
 import Contact from './pages/Contact.jsx'
+import Privacy from './pages/Privacy.jsx'
+import Terms from './pages/Terms.jsx'
+import Accessibility from './pages/Accessibility.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -19,8 +22,8 @@ export default function App() {
     <div className="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
       <ScrollToTop />
       <Navbar />
-      {/* Home hero sits under the transparent fixed navbar; other pages need top offset */}
-      <main className={`flex-grow ${isHome ? '' : 'pt-[76px]'}`}>
+      {/* Home: transparent nav overlays the hero. Inner pages: nav sits above content. */}
+      <main className={`flex-grow ${isHome ? '' : 'pt-[68px]'}`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,6 +31,9 @@ export default function App() {
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/student-life" element={<StudentLife />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/accessibility" element={<Accessibility />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

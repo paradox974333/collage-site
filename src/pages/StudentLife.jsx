@@ -1,3 +1,4 @@
+import Seo from '../components/Seo.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Icon from '../components/Icon.jsx'
 
@@ -28,10 +29,14 @@ const EVENTS = [
 export default function StudentLife() {
   return (
     <>
+      <Seo
+        title="Student Life"
+        path="/student-life"
+        description="Arts & culture, sports, NCC, science exhibitions, yoga and residential life at Kayaka PU College, Kalaburagi — a vibrant, close-knit campus community."
+      />
       <PageHeader
         eyebrow="Student Life"
-        icon="diversity_3"
-        title="Find Your People."
+        title="Find your people."
         subtitle="From the quad to the clubs, life at Kayaka is vibrant, welcoming, and always buzzing with energy."
       />
 
@@ -45,7 +50,7 @@ export default function StudentLife() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div className="relative z-10 p-6 md:p-8 max-w-xl">
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-white mb-2 drop-shadow">
+            <h2 className="text-section text-white mb-2 drop-shadow">
               A Home Away From Home
             </h2>
             <p className="font-body-lg text-body-lg text-white/90 drop-shadow">
@@ -58,10 +63,12 @@ export default function StudentLife() {
 
       {/* Organizations */}
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg reveal">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Activities & Facilities</h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
-          Beyond the classroom — where students grow in every direction.
-        </p>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-section text-on-surface mb-3">Activities &amp; Facilities</h2>
+          <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant">
+            Beyond the classroom — where students grow in every direction.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {ORGS.map((o) => (
             <div
@@ -83,21 +90,21 @@ export default function StudentLife() {
       {/* Events */}
       <section className="bg-surface-container-low py-lg md:py-xl">
         <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-          <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-6 md:mb-12">Upcoming Events</h2>
+          <h2 className="text-section text-on-surface mb-6 md:mb-12 text-center">Upcoming Events</h2>
           <div className="space-y-4">
             {EVENTS.map((e) => (
               <div
                 key={e.title}
                 className="flex items-center gap-6 bg-surface rounded-xl border border-surface-variant p-5 warm-shadow-hover transition-all"
               >
-                <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-primary text-on-primary shrink-0">
+                <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-on-surface text-snow shrink-0">
                   <span className="font-label-sm text-label-sm uppercase">{e.date.split(' ')[0]}</span>
                   <span className="font-headline-md text-headline-md leading-none">{e.date.split(' ')[1]}</span>
                 </div>
                 <div>
                   <h3 className="font-headline-md text-headline-md text-on-surface">{e.title}</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
-                    <Icon name="location_on" className="text-sm text-primary" />
+                    <Icon name="location_on" className="text-sm text-on-surface-variant" />
                     {e.place}
                   </p>
                 </div>

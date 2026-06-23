@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Icon from '../components/Icon.jsx'
 
@@ -44,11 +45,16 @@ const COURSES = [
 export default function Academics() {
   return (
     <>
+      <Seo
+        title="Academics"
+        path="/academics"
+        description="Two-year PU programmes in Science (PCMB, PCMC) and Commerce, affiliated to the Department of Pre-University Education, Karnataka — with CET, NEET and CA-CPT / CS coaching at Kayaka PU College, Kalaburagi."
+      />
       <PageHeader
         eyebrow="Academics"
-        icon="menu_book"
-        title="Learn Without Limits."
+        title="Learn without limits."
         subtitle="Two-year Pre-University programmes in Science and Commerce, affiliated to the Department of Pre-University Education, Government of Karnataka — with focused CA-CPT and CS coaching."
+        cta={{ label: 'Apply Now', to: '/admissions' }}
       />
 
       {/* Stats strip */}
@@ -61,7 +67,7 @@ export default function Academics() {
             { v: '40+', l: 'Faculty Members' },
           ].map((s) => (
             <div key={s.l}>
-              <div className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-primary">{s.v}</div>
+              <div className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface">{s.v}</div>
               <div className="font-body-md text-body-md text-on-surface-variant">{s.l}</div>
             </div>
           ))}
@@ -78,7 +84,7 @@ export default function Academics() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div className="relative z-10 p-6 md:p-8 max-w-xl">
-            <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-white mb-2 drop-shadow">
+            <h2 className="text-section text-white mb-2 drop-shadow">
               Hands-On Learning
             </h2>
             <p className="font-body-lg text-body-lg text-white/90 drop-shadow">
@@ -90,28 +96,30 @@ export default function Academics() {
 
       {/* Colleges grid */}
       <section className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl reveal">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-2">Courses We Offer</h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
-          Choose the stream that fits your ambition.
-        </p>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-section text-on-surface mb-3">Courses We Offer</h2>
+          <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant">
+            Choose the stream that fits your ambition.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {COURSES.map((c) => (
             <div
               key={c.name}
               className="bg-surface rounded-xl border border-surface-variant p-6 warm-shadow-hover transition-all flex flex-col"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-4">
+              <div className="w-12 h-12 rounded-full bg-fog flex items-center justify-center text-on-surface mb-4">
                 <Icon name={c.icon} fill />
               </div>
               <h3 className="font-headline-md text-headline-md text-on-surface mb-2">{c.name}</h3>
               <p className="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">{c.text}</p>
               <div className="flex items-center justify-between">
-                <span className="font-label-sm text-label-sm text-secondary bg-secondary-container px-3 py-1 rounded-full">
+                <span className="font-label-sm text-label-sm text-on-surface-variant bg-fog px-3 py-1 rounded-full">
                   {c.tag}
                 </span>
                 <Link
                   to="/admissions"
-                  className="font-label-lg text-label-lg text-primary hover:underline flex items-center gap-1"
+                  className="font-label-lg text-label-lg text-cobalt-link hover:underline flex items-center gap-1"
                 >
                   Learn more <Icon name="arrow_forward" className="text-sm" />
                 </Link>

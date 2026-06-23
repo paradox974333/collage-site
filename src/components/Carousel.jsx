@@ -30,11 +30,9 @@ export default function Carousel() {
 
   return (
     <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg">
-      <div className="mb-5 md:mb-8 text-center">
-        <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mb-1">
-          Campus Gallery
-        </h2>
-        <p className="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant">
+      <div className="mb-6 md:mb-10 text-center max-w-2xl mx-auto">
+        <h2 className="text-section text-on-surface mb-3">Campus Gallery</h2>
+        <p className="font-body-lg text-body-lg md:text-[21px] text-on-surface-variant">
           A glimpse into life at Kayaka PU College.
         </p>
       </div>
